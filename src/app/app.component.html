@@ -1,3 +1,25 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <button class="button" type="button">Zürich</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+        <button class="button" type="button" (click)="onDisplayConnection('Luzern')">Luzern</button>
+    </div>
+    <div class="column">
+      <button class="button" type="button">Bern</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <button class="button" type="button">Basel</button>
+    </div>
+    <div class="column">
+      <button class="button" type="button">Zug</button>
+    </div>
+  </div>
+</div>
+<div>{{connection.departure}}</div>
+<div>{{connection.platform}}</div>
