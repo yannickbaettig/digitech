@@ -38,7 +38,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: white;
+  background-color: #eb0000;
   z-index: 2;
   cursor: none;
 }
@@ -50,7 +50,7 @@
   white-space: nowrap;
   font-family: SBB-Bold,Arial,sans-serif;
   font-size: 50px;
-  color: #eb0000;
+  color: white;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }

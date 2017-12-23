@@ -44,6 +44,4 @@ export class ConnectionService {
   }
 
 }
-/*response => {
-  const connections = response.json();
-  return connections.map((connection => new Connection(connection)));*/
+
