@@ -8,7 +8,7 @@ import { ConnectionService } from './services/connection.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

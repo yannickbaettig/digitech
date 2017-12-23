@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="column">
-      <button class="button" type="button">Zürich</button>
+      <button class="button" type="button" (click)="onDisplayConnection('Zürich')">Zürich</button>
     </div>
   </div>
   <div class="row">
@@ -9,17 +9,19 @@
         <button class="button" type="button" (click)="onDisplayConnection('Luzern')">Luzern</button>
     </div>
     <div class="column">
-      <button class="button" type="button">Bern</button>
+      <button class="button" type="button" (click)="onDisplayConnection('Bern')">Bern</button>
     </div>
   </div>
   <div class="row">
     <div class="column">
-      <button class="button" type="button">Basel</button>
+      <button class="button" type="button" (click)="onDisplayConnection('Basel')">Basel</button>
     </div>
     <div class="column">
-      <button class="button" type="button">Zug</button>
+      <button class="button" type="button" (click)="onDisplayConnection('Zug')">Zug</button>
     </div>
   </div>
 </div>
-<div>{{connection.departure}}</div>
-<div>{{connection.platform}}</div>
+<!--<app-overlay *ngIf="showOverlay" (connectiontoShow)=""></app-overlay>-->
+<div class="overlay" *ngIf="showOverlay">
+  <div class="overlay-text">Din Zug fahrt in {{connection.calculateTime()}} Minute uf Gleis {{connection.platform}}</div>
+</div>

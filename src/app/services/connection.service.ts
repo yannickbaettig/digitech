@@ -16,8 +16,9 @@ export class ConnectionService {
   constructor(private http: Http) { }
 
   public getConnections(to: String): Observable<Connection>  {
+    const timeStamp = new Date().getTime();
    const from = 'Rotkreuz';
-   const query: string = API_URL + 'from=' + from + '&to=' + to + '&limit=1';
+   const query: string = API_URL + 'from=' + from + '&to=' + to + '&limit=1 + ?tsp=' + timeStamp;
 
    return this.http
      .get(query)
@@ -34,7 +35,7 @@ export class ConnectionService {
   private extractData(response: Response | any) {
     this.connection  = new Connection();
     const body = response.json();
-    this.connection.departure = body.connections[0].from.departure;
+    this.connection.departure = new Date(body.connections[0].from.departure);
     this.connection.platform = body.connections[0].from.platform;
     console.log(body);
     console.log(this.connection);
