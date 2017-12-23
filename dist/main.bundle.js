@@ -181,13 +181,13 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 var Connection = (function () {
     function Connection() {
     }
-    /*  constructor(values: Object = {}) {
-        Object.assign(this, values);
-      }*/
     Connection.prototype.calculateTime = function () {
         var currentDate = new Date();
         var timeDifference = Math.round((this.departure.getTime() - currentDate.getTime()) / 1000 / 60);
-        return timeDifference;
+        if (timeDifference <= 0) {
+            return '< 1';
+        }
+        return timeDifference.toString();
     };
     return Connection;
 }());
