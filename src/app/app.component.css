@@ -26,6 +26,9 @@
   margin: 0;
   padding: 0;
   opacity: 0;
+  background-color: #eb0000;
+  border-color: white;
+  color: #fff;
   cursor: inherit;
 
 }
