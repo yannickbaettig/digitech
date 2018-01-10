@@ -30,8 +30,12 @@
   border-color: white;
   color: #fff;
   cursor: inherit;
-
+  border:none;
 }
+
+/*.button:hover{
+  background-color: black;
+}*/
 
 .overlay {
   position: fixed;
